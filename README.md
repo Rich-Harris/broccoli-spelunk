@@ -77,7 +77,7 @@ Credits
 
 * [Jo Liss](https://twitter.com/jo_liss) created [broccoli](https://github.com/broccolijs/broccoli) and the [broccoli-writer](https://github.com/broccolijs/broccoli-writer) utility which this plugin uses
 * [Marcello Bastéa-Forte](https://twitter.com/marcello3d) wrote [node-tosource](https://github.com/marcello3d/node-tosource) which this plugin uses to serialize objects
-* [JP Richardson](https://twitter.com/jprichardson) wrote [node-fs-extra](https://github.com/jprichardson/node-fs-extra), which you should all be using
+* [Substack](https://twitter.com/substack) wrote [node-mkdirp](https://github.com/substack/node-mkdirp), which makes dealing with the filesystem bearable
 * [Jake Archibald](https://twitter.com/jaffathecake) created the [es6-promise](https://github.com/jakearchibald/es6-promise) polyfill
 
 

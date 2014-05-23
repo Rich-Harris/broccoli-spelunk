@@ -1,8 +1,9 @@
 var Writer = require( 'broccoli-writer' ),
 	Promise = require( 'es6-promise' ).Promise,
 	spelunk = require( 'spelunk' ),
-	fs = require( 'fs-extra' ),
+	fs = require( 'fs' ),
 	path = require( 'path' ),
+	mkdirp = require( 'mkdirp' ),
 	tosource = require( 'tosource' );
 
 
@@ -66,9 +67,13 @@ SpelunkCompiler.prototype.write = function ( readTree, destDir ) {
 						throw new Error( 'broccoli-spelunk supports the following modes: json, amd, cjs, es6' );
 				}
 
-				fs.writeFile( path.join( destDir, self.outputFile ), stringified, function ( err, result ) {
-					if ( err ) return reject( err );
-					fulfil();
+				mkdirp( path.join( destDir, self.outputFile, '..' ), function ( err ) {
+					if ( err ) throw err;
+
+					fs.writeFile( path.join( destDir, self.outputFile ), stringified, function ( err, result ) {
+						if ( err ) throw err;
+						fulfil();
+					});
 				});
 			});
 		});
