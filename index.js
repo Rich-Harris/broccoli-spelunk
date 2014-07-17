@@ -40,7 +40,8 @@ SpelunkCompiler.prototype.write = function ( readTree, destDir ) {
 	return new Promise( function ( fulfil, reject ) {
 		readTree( self.inputTree ).then( function ( srcDir ) {
 			spelunk( srcDir, {
-				exclude: self.exclude
+				exclude: self.exclude,
+				keepExtensions: self.keepExtensions
 			}, function ( err, result ) {
 				var mode = self.mode, stringified;
 
