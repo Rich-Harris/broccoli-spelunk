@@ -1,6 +1,6 @@
 {
   "name": "broccoli-spelunk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Rich-Harris",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "broccoli-writer": "^0.1.1",
-    "spelunk": "^0.1.1",
+    "spelunk": "^0.1.2",
     "es6-promise": "^1.0.0",
     "fs-extra": "^0.9.1",
     "tosource": "^0.1.2",
